@@ -1,0 +1,2518 @@
+{
+    "project": {
+        "name": "apparpavaria",
+        "description": "",
+        "version": "1.0.0",
+        "url": "arpa.veneto.it"
+    },
+    "files": {
+        "dev\\controllers\\appcontroller.js": {
+            "name": "dev\\controllers\\appcontroller.js",
+            "modules": {},
+            "classes": {
+                "AppController": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\controllers\\ariarouter.js": {
+            "name": "dev\\controllers\\ariarouter.js",
+            "modules": {},
+            "classes": {
+                "AriaRouter": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\controllers\\dataparser.js": {
+            "name": "dev\\controllers\\dataparser.js",
+            "modules": {},
+            "classes": {
+                "DataParser": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\controllers\\dataprovider.js": {
+            "name": "dev\\controllers\\dataprovider.js",
+            "modules": {},
+            "classes": {
+                "DataProvider": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\prototypes\\airdata.js": {
+            "name": "dev\\prototypes\\airdata.js",
+            "modules": {},
+            "classes": {
+                "Airdata": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\prototypes\\centralina.js": {
+            "name": "dev\\prototypes\\centralina.js",
+            "modules": {},
+            "classes": {
+                "Centralina": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\prototypes\\coptable.js": {
+            "name": "dev\\prototypes\\coptable.js",
+            "modules": {},
+            "classes": {
+                "CopTable": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\prototypes\\geohelper.js": {
+            "name": "dev\\prototypes\\geohelper.js",
+            "modules": {},
+            "classes": {
+                "GeoHelper": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\prototypes\\maphelper.js": {
+            "name": "dev\\prototypes\\maphelper.js",
+            "modules": {},
+            "classes": {
+                "MapHelper": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\prototypes\\misurazione.js": {
+            "name": "dev\\prototypes\\misurazione.js",
+            "modules": {
+                "measures": 1
+            },
+            "classes": {
+                "Misurazione": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\prototypes\\misure.js": {
+            "name": "dev\\prototypes\\misure.js",
+            "modules": {},
+            "classes": {
+                "Misure": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\prototypes\\modalhelper.js": {
+            "name": "dev\\prototypes\\modalhelper.js",
+            "modules": {},
+            "classes": {
+                "ModalHelper": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\prototypes\\o3.js": {
+            "name": "dev\\prototypes\\o3.js",
+            "modules": {},
+            "classes": {
+                "O3": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\prototypes\\page.js": {
+            "name": "dev\\prototypes\\page.js",
+            "modules": {},
+            "classes": {
+                "Page": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\prototypes\\pm10.js": {
+            "name": "dev\\prototypes\\pm10.js",
+            "modules": {},
+            "classes": {
+                "PM10": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\prototypes\\province.js": {
+            "name": "dev\\prototypes\\province.js",
+            "modules": {
+                "airdata": 1
+            },
+            "classes": {
+                "Province": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\prototypes\\provincia.js": {
+            "name": "dev\\prototypes\\provincia.js",
+            "modules": {},
+            "classes": {
+                "Provincia": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\prototypes\\settings.js": {
+            "name": "dev\\prototypes\\settings.js",
+            "modules": {
+                "model": 1
+            },
+            "classes": {
+                "Settings": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\views\\_centralinaitem.js": {
+            "name": "dev\\views\\_centralinaitem.js",
+            "modules": {
+                "controller": 1
+            },
+            "classes": {
+                "CentralinaItem": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\views\\_provinciaitem.js": {
+            "name": "dev\\views\\_provinciaitem.js",
+            "modules": {},
+            "classes": {
+                "ProvinciaItem": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\views\\centralinaalertview.js": {
+            "name": "dev\\views\\centralinaalertview.js",
+            "modules": {},
+            "classes": {
+                "CentralinaAlertView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\views\\centralinapopupmap.js": {
+            "name": "dev\\views\\centralinapopupmap.js",
+            "modules": {},
+            "classes": {
+                "CentralinaPopupMap": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\views\\centralinaview.js": {
+            "name": "dev\\views\\centralinaview.js",
+            "modules": {},
+            "classes": {
+                "CentralinaView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\views\\centralinelist.js": {
+            "name": "dev\\views\\centralinelist.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\views\\copview.js": {
+            "name": "dev\\views\\copview.js",
+            "modules": {},
+            "classes": {
+                "Copview": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\views\\mainview.js": {
+            "name": "dev\\views\\mainview.js",
+            "modules": {},
+            "classes": {
+                "MainView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\views\\mapview.js": {
+            "name": "dev\\views\\mapview.js",
+            "modules": {},
+            "classes": {
+                "MapView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\views\\provincelist.js": {
+            "name": "dev\\views\\provincelist.js",
+            "modules": {},
+            "classes": {
+                "CentralineList": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\views\\settingsview.js": {
+            "name": "dev\\views\\settingsview.js",
+            "modules": {},
+            "classes": {
+                "SettingsView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "dev\\views\\topview.js": {
+            "name": "dev\\views\\topview.js",
+            "modules": {},
+            "classes": {
+                "TopView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "controller": {
+            "name": "controller",
+            "submodules": {},
+            "classes": {
+                "AppController": 1,
+                "AriaRouter": 1,
+                "DataParser": 1,
+                "DataProvider": 1,
+                "ModalHelper": 1,
+                "CentralinaItem": 1,
+                "ProvinciaItem": 1,
+                "CentralinaAlertView": 1,
+                "CentralinaPopupMap": 1,
+                "CentralinaView": 1,
+                "CentralineList": 1,
+                "Copview": 1,
+                "MainView": 1,
+                "MapView": 1,
+                "SettingsView": 1,
+                "TopView": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "dev\\views\\topview.js",
+            "line": 18,
+            "description": "Provides the application a controller and view managers"
+        },
+        "airdata": {
+            "name": "airdata",
+            "submodules": {
+                "measures": 1
+            },
+            "classes": {
+                "Airdata": 1,
+                "Centralina": 1,
+                "CopTable": 1,
+                "Misurazione": 1,
+                "Misure": 1,
+                "O3": 1,
+                "PM10": 1,
+                "Province": 1,
+                "Provincia": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "dev\\prototypes\\provincia.js",
+            "line": 18,
+            "description": "Provides the application air quality data"
+        },
+        "model": {
+            "name": "model",
+            "submodules": {},
+            "classes": {
+                "GeoHelper": 1,
+                "MapHelper": 1,
+                "Page": 1,
+                "Settings": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "dev\\prototypes\\settings.js",
+            "line": 18,
+            "description": "Provides the application a data model"
+        },
+        "measures": {
+            "name": "measures",
+            "submodules": {},
+            "classes": {
+                "Misurazione": 1,
+                "O3": 1,
+                "PM10": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "airdata",
+            "namespace": "",
+            "file": "dev\\prototypes\\pm10.js",
+            "line": 17,
+            "description": "Provides the base measure class"
+        }
+    },
+    "classes": {
+        "AppController": {
+            "name": "AppController",
+            "shortname": "AppController",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "controller",
+            "namespace": "",
+            "file": "dev\\controllers\\appcontroller.js",
+            "line": 18,
+            "description": "Provides an entry point to the application, as well as managing the retrieval of remote data and the correct dispatching of views",
+            "extends": "Backbone.Model",
+            "is_constructor": 1
+        },
+        "AriaRouter": {
+            "name": "AriaRouter",
+            "shortname": "AriaRouter",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "controller",
+            "namespace": "",
+            "file": "dev\\controllers\\ariarouter.js",
+            "line": 18,
+            "description": "Maps routes to actual controller actions, Methods should delegate operations to appropriate controller methods",
+            "extends": "Backbone.Router",
+            "is_constructor": 1
+        },
+        "DataParser": {
+            "name": "DataParser",
+            "shortname": "DataParser",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "controller",
+            "namespace": "",
+            "file": "dev\\controllers\\dataparser.js",
+            "line": 18,
+            "description": "Parses JSON files and initializes the correct instances of our model objects",
+            "extends": "Backbone.Model",
+            "is_constructor": 1
+        },
+        "DataProvider": {
+            "name": "DataProvider",
+            "shortname": "DataProvider",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "controller",
+            "namespace": "",
+            "file": "dev\\controllers\\dataprovider.js",
+            "line": 18,
+            "description": "Returns correct URLs pointing to the updated data.\nShould STRICTLY adhere to this interface, with modifications having repercussions on the DataParser class.",
+            "extends": "Backbone.Model",
+            "is_constructor": 1
+        },
+        "Airdata": {
+            "name": "Airdata",
+            "shortname": "Airdata",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "airdata",
+            "namespace": "",
+            "file": "dev\\prototypes\\airdata.js",
+            "line": 18,
+            "description": "Air data collection prototype. Will hold Centralina prototypes",
+            "extends": "Backbone.Collection",
+            "is_constructor": 1
+        },
+        "Centralina": {
+            "name": "Centralina",
+            "shortname": "Centralina",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "airdata",
+            "namespace": "",
+            "file": "dev\\prototypes\\centralina.js",
+            "line": 18,
+            "description": "Centralina model prototype",
+            "extends": "Backbone.Model",
+            "is_constructor": 1
+        },
+        "CopTable": {
+            "name": "CopTable",
+            "shortname": "CopTable",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "airdata",
+            "namespace": "",
+            "file": "dev\\prototypes\\coptable.js",
+            "line": 18,
+            "description": "COP table model prototype",
+            "extends": "Backbone.Model",
+            "is_constructor": 1
+        },
+        "GeoHelper": {
+            "name": "GeoHelper",
+            "shortname": "GeoHelper",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "model",
+            "namespace": "",
+            "file": "dev\\prototypes\\geohelper.js",
+            "line": 18,
+            "description": "Geolocation helper. Holds default coordinates set in the middle of Veneto, and tries to localize the user.",
+            "extends": "Backbone.Model",
+            "is_constructor": 1
+        },
+        "MapHelper": {
+            "name": "MapHelper",
+            "shortname": "MapHelper",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "model",
+            "namespace": "",
+            "file": "dev\\prototypes\\maphelper.js",
+            "line": 18,
+            "description": "Map helper. Works as an adapter between our application and the Leaflet OpenStreetMap API.\nThis way, we can define a set of map-provider-agnostic functions, and help isolation of the external API.\n\nThis should be treated as an interface! Every change on the function signatures has repercussions on the whole system",
+            "extends": "Backbone.Model",
+            "is_constructor": 1
+        },
+        "Misurazione": {
+            "name": "Misurazione",
+            "shortname": "Misurazione",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "airdata",
+            "submodule": "measures",
+            "namespace": "",
+            "file": "dev\\prototypes\\misurazione.js",
+            "line": 19,
+            "description": "Base measure class, to be extended by actual measures",
+            "extends": "Backbone.Model",
+            "is_constructor": 1
+        },
+        "Misure": {
+            "name": "Misure",
+            "shortname": "Misure",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "airdata",
+            "namespace": "",
+            "file": "dev\\prototypes\\misure.js",
+            "line": 18,
+            "description": "Misure collection prototype",
+            "extends": "Backbone.Collection",
+            "is_constructor": 1
+        },
+        "ModalHelper": {
+            "name": "ModalHelper",
+            "shortname": "ModalHelper",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "controller",
+            "namespace": "",
+            "file": "dev\\prototypes\\modalhelper.js",
+            "line": 18,
+            "description": "Mmodal dialog manager. Displays and hides our messages as a modal alert with no buttons",
+            "extends": "Backbone.Model",
+            "is_constructor": 1
+        },
+        "O3": {
+            "name": "O3",
+            "shortname": "O3",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "airdata",
+            "submodule": "measures",
+            "namespace": "",
+            "file": "dev\\prototypes\\o3.js",
+            "line": 17,
+            "description": "Provides the prototype for our O3 sampling, as well as useful methods",
+            "extends": "Misurazione",
+            "is_constructor": 1
+        },
+        "Page": {
+            "name": "Page",
+            "shortname": "Page",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "model",
+            "namespace": "",
+            "file": "dev\\prototypes\\page.js",
+            "line": 18,
+            "description": "Webapp page model. Holds data about the header, and if it has to show the logo banner.",
+            "extends": "Backbone.Model",
+            "is_constructor": 1
+        },
+        "PM10": {
+            "name": "PM10",
+            "shortname": "PM10",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "airdata",
+            "submodule": "measures",
+            "namespace": "",
+            "file": "dev\\prototypes\\pm10.js",
+            "line": 17,
+            "description": "Provides the prototype for our PM10 sampling, as well as useful methods",
+            "extends": "Misurazione",
+            "is_constructor": 1
+        },
+        "Province": {
+            "name": "Province",
+            "shortname": "Province",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "airdata",
+            "namespace": "",
+            "file": "dev\\prototypes\\province.js",
+            "line": 18,
+            "description": "Province collection prototype",
+            "extends": "Backbone.Collection",
+            "is_constructor": 1
+        },
+        "Provincia": {
+            "name": "Provincia",
+            "shortname": "Provincia",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "airdata",
+            "namespace": "",
+            "file": "dev\\prototypes\\provincia.js",
+            "line": 18,
+            "description": "Provincia model prototype",
+            "extends": "Backbone.Model",
+            "is_constructor": 1
+        },
+        "Settings": {
+            "name": "Settings",
+            "shortname": "Settings",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "model",
+            "namespace": "",
+            "file": "dev\\prototypes\\settings.js",
+            "line": 18,
+            "description": "User settings model. Saves user settings about our ozone warning system",
+            "extends": "Backbone.Model",
+            "is_constructor": 1
+        },
+        "CentralinaItem": {
+            "name": "CentralinaItem",
+            "shortname": "CentralinaItem",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "controller",
+            "namespace": "",
+            "file": "dev\\views\\_centralinaitem.js",
+            "line": 18,
+            "description": "Centralina list item view. Renders a single row with relevant data from the station",
+            "extends": "Backbone.Marionette.ItemView",
+            "is_constructor": 1
+        },
+        "ProvinciaItem": {
+            "name": "ProvinciaItem",
+            "shortname": "ProvinciaItem",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "controller",
+            "namespace": "",
+            "file": "dev\\views\\_provinciaitem.js",
+            "line": 18,
+            "description": "Provincia list item view. Renders a single row with relevant data from the province",
+            "extends": "Backbone.Marionette.ItemView",
+            "is_constructor": 1
+        },
+        "CentralinaAlertView": {
+            "name": "CentralinaAlertView",
+            "shortname": "CentralinaAlertView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "controller",
+            "namespace": "",
+            "file": "dev\\views\\centralinaalertview.js",
+            "line": 18,
+            "description": "Renders buttons to toggle the alert system for the given station.\nNote that this does not inherit from the \"magic\" Marionette views, but from a bare backbone view, and has to provide a render method, and the latter has to be called explicitly.",
+            "extends": "Backbone.View",
+            "is_constructor": 1
+        },
+        "CentralinaPopupMap": {
+            "name": "CentralinaPopupMap",
+            "shortname": "CentralinaPopupMap",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "controller",
+            "namespace": "",
+            "file": "dev\\views\\centralinapopupmap.js",
+            "line": 18,
+            "description": "Map popup manager. Creates popup content with station data",
+            "extends": "Backbone.Marionette.ItemView",
+            "is_constructor": 1
+        },
+        "CentralinaView": {
+            "name": "CentralinaView",
+            "shortname": "CentralinaView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "controller",
+            "namespace": "",
+            "file": "dev\\views\\centralinaview.js",
+            "line": 18,
+            "description": "Renders a page with details from the station and plotted data",
+            "extends": "Backbone.Marionette.ItemView",
+            "is_constructor": 1
+        },
+        "CentralineList": {
+            "name": "CentralineList",
+            "shortname": "CentralineList",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "controller",
+            "namespace": "",
+            "file": "dev\\views\\provincelist.js",
+            "line": 18,
+            "description": "Province List view prototype. Renders the list of provinces with at least one station.\nThis class renders the container of the list, and calls a given itemView for every element in the collection",
+            "extends": "Backbone.Marionette.CompositeView",
+            "is_constructor": 1
+        },
+        "Copview": {
+            "name": "Copview",
+            "shortname": "Copview",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "controller",
+            "namespace": "",
+            "file": "dev\\views\\copview.js",
+            "line": 18,
+            "description": "Renders the given COP table entry",
+            "extends": "Backbone.Marionette.ItemView",
+            "is_constructor": 1
+        },
+        "MainView": {
+            "name": "MainView",
+            "shortname": "MainView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "controller",
+            "namespace": "",
+            "file": "dev\\views\\mainview.js",
+            "line": 18,
+            "description": "Main View manager. Renders our MainView template and manages user interaction",
+            "extends": "Backbone.Marionette.ItemView",
+            "is_constructor": 1
+        },
+        "MapView": {
+            "name": "MapView",
+            "shortname": "MapView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "controller",
+            "namespace": "",
+            "file": "dev\\views\\mapview.js",
+            "line": 18,
+            "description": "Map view manager. Displays an interactive map from OpenStreetMaps",
+            "extends": "Backbone.Marionette.ItemView",
+            "is_constructor": 1
+        },
+        "SettingsView": {
+            "name": "SettingsView",
+            "shortname": "SettingsView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "controller",
+            "namespace": "",
+            "file": "dev\\views\\settingsview.js",
+            "line": 18,
+            "description": "Settings view manager, to show and edit stored user preferences",
+            "extends": "Backbone.Marionette.ItemView",
+            "is_constructor": 1
+        },
+        "TopView": {
+            "name": "TopView",
+            "shortname": "TopView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "controller",
+            "namespace": "",
+            "file": "dev\\views\\topview.js",
+            "line": 18,
+            "description": "Top view manager. Renders a banner, the title and navigation controls",
+            "extends": "Backbone.Marionette.ItemView",
+            "is_constructor": 1
+        }
+    },
+    "classitems": [
+        {
+            "file": "dev\\controllers\\appcontroller.js",
+            "line": 27,
+            "description": "Method to be run when the application first starts. \n\tIt initializes our global (singleton-like) classes:\n\t\t- ModalHelper (used to display error and loading messages)\n\t\t- DataProvider and DataParser to retrieve data\n\t\t- The Router used to manage navigation between views\n\t\t- Settings and LocalStorage, to manage user settings\n\t\t- GeoHelper and MapHelper, adapters to the geolocation API and Leaflet API\n\tAnd loads the main view.",
+            "itemtype": "method",
+            "name": "start",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AppController",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\appcontroller.js",
+            "line": 90,
+            "description": "Method used to print the page head, with navigation icons and page title. Creates and loads an instance of the TopView object",
+            "itemtype": "method",
+            "name": "printHead",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AppController",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\appcontroller.js",
+            "line": 128,
+            "description": "Loads our Map view. Ensures an active internet connection exists, and raises an error otherwise.\n\tCalls utility methods of the controller to create the OpenStreetMap map, and to draw markers on the map.",
+            "itemtype": "method",
+            "name": "map",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AppController",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\appcontroller.js",
+            "line": 156,
+            "description": "Loads the Province List view",
+            "itemtype": "method",
+            "name": "list",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AppController",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\appcontroller.js",
+            "line": 169,
+            "description": "Loads the Main view",
+            "itemtype": "method",
+            "name": "index",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AppController",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\appcontroller.js",
+            "line": 182,
+            "description": "Loads the Stations list view",
+            "itemtype": "method",
+            "name": "stations",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "the ID of the province whom stations we want to display"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AppController",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\appcontroller.js",
+            "line": 199,
+            "description": "Loads the details page for a single station. Finds the station and creates the view, as well as calling utility methods to plot data and to call the Is-This-Starred view",
+            "itemtype": "method",
+            "name": "station",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "the ID of the station we want to display"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AppController",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\appcontroller.js",
+            "line": 223,
+            "description": "Loads the validated data table of the given station. If there's no cached data, has to remotely retrieve the XML file holding the data.\n\tWhen the data has been loaded, calls the copReady method, who will then create the View.",
+            "itemtype": "method",
+            "name": "cop",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "the ID of the station we want to display"
+                },
+                {
+                    "name": "provincia",
+                    "description": "the name of the province"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AppController",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\appcontroller.js",
+            "line": 246,
+            "description": "Loads the validated data table view, with the data retrieved from the cop method",
+            "itemtype": "method",
+            "name": "copReady",
+            "params": [
+                {
+                    "name": "model",
+                    "description": "the validated data of the station"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AppController",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\appcontroller.js",
+            "line": 261,
+            "description": "Loads the settings view. Currently it's used as a Bookmark page, but will be improved when the push-notification component will be finished",
+            "itemtype": "method",
+            "name": "settings",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AppController",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\appcontroller.js",
+            "line": 275,
+            "description": "Sets up the OpenStreetMap map, calling our adapter methods.\n\tBeside the name of this method, this makes the application independent from the actual map provider, as MapHelper provides an interface and encapsulates and hides provider-specific code.",
+            "itemtype": "method",
+            "name": "openStreetMap",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AppController",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\appcontroller.js",
+            "line": 288,
+            "description": "Sets up markers on the map representing the stations.\n\tThis calls some adapter methods to encapsulate provider-specific code. The view that generates our popup is pure HTML (and thus implementation-independend) and can be binded to whatever map manager we are using",
+            "itemtype": "method",
+            "name": "centralineMarker",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AppController",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\appcontroller.js",
+            "line": 311,
+            "description": "Sets up a special marker on the map based on the user's position, if any.",
+            "itemtype": "method",
+            "name": "userMarker",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AppController",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\ariarouter.js",
+            "line": 27,
+            "description": "Available routes. These are the patterns Backbone will monitor whenever a new state is pushed on the navigation stack.\nIt is, whenever some event or method calls navigate(url), checks the routes and, if there's a match, calls the router method.\n\nShould be a JSON object in the form\n\t\"pattern\" : \"router_method_to_be_called\"\n\t\nThe method to be called should be a simple redirect to the correct Controller method, who will then instantiate the view",
+            "itemtype": "property",
+            "name": "routes",
+            "type": "Object",
+            "class": "AriaRouter",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\ariarouter.js",
+            "line": 49,
+            "description": "Calls the controller Map method",
+            "itemtype": "method",
+            "name": "map",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AriaRouter",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\ariarouter.js",
+            "line": 59,
+            "description": "Calls the controller List method",
+            "itemtype": "method",
+            "name": "list",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AriaRouter",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\ariarouter.js",
+            "line": 69,
+            "description": "Calls the controller Index method",
+            "itemtype": "method",
+            "name": "index",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AriaRouter",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\ariarouter.js",
+            "line": 79,
+            "description": "Calls the controller Settings method",
+            "itemtype": "method",
+            "name": "map",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AriaRouter",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\ariarouter.js",
+            "line": 89,
+            "description": "Calls the controller Stations method",
+            "itemtype": "method",
+            "name": "stations",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AriaRouter",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\ariarouter.js",
+            "line": 99,
+            "description": "Calls the controller Station method",
+            "itemtype": "method",
+            "name": "station",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AriaRouter",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\ariarouter.js",
+            "line": 109,
+            "description": "Calls the controller Cop method",
+            "itemtype": "method",
+            "name": "cop",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AriaRouter",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\dataparser.js",
+            "line": 27,
+            "description": "Uses the given dataProvider to retrieve station data, properties and coordinates. Populates Centralina objects and creates our Airdata collection",
+            "itemtype": "method",
+            "name": "parseAll",
+            "params": [
+                {
+                    "name": "dataProvider",
+                    "description": "an instance of DataProvider"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "DataParser",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\dataparser.js",
+            "line": 129,
+            "description": "Uses the given dataProvider to retrieve validated data URL, retrieves it with an AJAX call and populates a CopTable object, setting it to its station",
+            "itemtype": "method",
+            "name": "parseCop",
+            "params": [
+                {
+                    "name": "xmlData",
+                    "description": "the URL of the XML to be parsed"
+                },
+                {
+                    "name": "id",
+                    "description": "The station whose validated data are to be parsed"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "DataParser",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\dataprovider.js",
+            "line": 28,
+            "description": "URL to the air quality data",
+            "itemtype": "method",
+            "name": "getData",
+            "return": {
+                "description": "URL to the air quality data JSON file"
+            },
+            "class": "DataProvider",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\dataprovider.js",
+            "line": 38,
+            "description": "URL to the stations' data",
+            "itemtype": "method",
+            "name": "getStations",
+            "return": {
+                "description": "URL to the stations' data JSON file"
+            },
+            "class": "DataProvider",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\dataprovider.js",
+            "line": 48,
+            "description": "URL to stations' coordinates",
+            "itemtype": "method",
+            "name": "getCoords",
+            "return": {
+                "description": "URL to the coordinates JSON file"
+            },
+            "class": "DataProvider",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\controllers\\dataprovider.js",
+            "line": 58,
+            "description": "URL to the validated data XML file for a given province",
+            "itemtype": "method",
+            "name": "getData",
+            "params": [
+                {
+                    "name": "provincia",
+                    "description": "Name of the province where the desired station is"
+                }
+            ],
+            "return": {
+                "description": "URL to the validated data XML file"
+            },
+            "class": "DataProvider",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\prototypes\\airdata.js",
+            "line": 27,
+            "description": "Identifies the objects the collection will hold",
+            "itemtype": "property",
+            "name": "model",
+            "type": "Class",
+            "static": 1,
+            "final": 1,
+            "class": "Airdata",
+            "module": "airdata"
+        },
+        {
+            "file": "dev\\prototypes\\centralina.js",
+            "line": 27,
+            "description": "Initializes default values, to ensure basic data can be provided.\nGets called everytime a new object is created",
+            "itemtype": "method",
+            "name": "defaults",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "Centralina",
+            "module": "airdata"
+        },
+        {
+            "file": "dev\\prototypes\\centralina.js",
+            "line": 53,
+            "description": "Formats the \"tipologia\" code of this station to a more user-friendly string",
+            "itemtype": "method",
+            "name": "formatTipologia",
+            "return": {
+                "description": "The type of the station",
+                "type": "String"
+            },
+            "class": "Centralina",
+            "module": "airdata"
+        },
+        {
+            "file": "dev\\prototypes\\coptable.js",
+            "line": 27,
+            "description": "Initializes default values, to ensure basic data can be provided.\nGets called everytime a new object is created",
+            "itemtype": "method",
+            "name": "defaults",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "CopTable",
+            "module": "airdata"
+        },
+        {
+            "file": "dev\\prototypes\\geohelper.js",
+            "line": 27,
+            "description": "Initializes default values, to ensure basic data can be provided.\nGets called everytime a new object is created",
+            "itemtype": "method",
+            "name": "defaults",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "GeoHelper",
+            "module": "model"
+        },
+        {
+            "file": "dev\\prototypes\\geohelper.js",
+            "line": 56,
+            "description": "Method automatically called at every instantiation, to bind needed events and listeners",
+            "itemtype": "method",
+            "name": "initialize",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "GeoHelper",
+            "module": "model"
+        },
+        {
+            "file": "dev\\prototypes\\geohelper.js",
+            "line": 69,
+            "description": "Tries to geolocalize the user thanks to the HTML5 Geolocation API.\n\tIf it succeeds, it updates class data (and whoever is listening to this class gets notified, as usual) and tries to find closest ozone and pm10, as well as updating the user marker position.\n\tErrors get logged to the console but nothing else happens, as geolocation is a best-effort function.\n\tThe first call uses low precision methods, the second call tries to use high-precision methods if the devices has any.",
+            "itemtype": "method",
+            "name": "geoLocalize",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "GeoHelper",
+            "module": "model"
+        },
+        {
+            "file": "dev\\prototypes\\geohelper.js",
+            "line": 106,
+            "description": "Tries to find the ozone station that's closest to the user, if his position is known.\n\tIf it succeeds, it should update this class attributes with the updated values. We are interested in the station's name, distance to the user, code and to its last ozone measure and date.",
+            "itemtype": "method",
+            "name": "closestOzone",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "GeoHelper",
+            "module": "model"
+        },
+        {
+            "file": "dev\\prototypes\\geohelper.js",
+            "line": 137,
+            "description": "Tries to find the PM10 station that's closest to the user, if his position is known.\n\tIf it succeeds, it should update this class attributes with the updated values. We are interested in the station's name, distance to the user, code and to its last PM10 measure and date.",
+            "itemtype": "method",
+            "name": "closestPM10",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "GeoHelper",
+            "module": "model"
+        },
+        {
+            "file": "dev\\prototypes\\maphelper.js",
+            "line": 30,
+            "description": "Initializes default values, to ensure basic data can be provided.\nGets called everytime a new object is created",
+            "itemtype": "method",
+            "name": "defaults",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "MapHelper",
+            "module": "model"
+        },
+        {
+            "file": "dev\\prototypes\\maphelper.js",
+            "line": 43,
+            "description": "Sets up the map, constraining it into the box described by the corners coordinates",
+            "itemtype": "method",
+            "name": "setupMap",
+            "params": [
+                {
+                    "name": "SOlat",
+                    "description": "the south-west Veneto corner latitude"
+                },
+                {
+                    "name": "SOlon",
+                    "description": "the south-west Veneto corner longitude"
+                },
+                {
+                    "name": "NElat",
+                    "description": "the north-east Veneto corner latitude"
+                },
+                {
+                    "name": "NElon",
+                    "description": "the north-west Veneto corner longitude"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "MapHelper",
+            "module": "model"
+        },
+        {
+            "file": "dev\\prototypes\\maphelper.js",
+            "line": 82,
+            "description": "Sets the map viewport center at the given latitude and longitude",
+            "itemtype": "method",
+            "name": "setView",
+            "params": [
+                {
+                    "name": "lat",
+                    "description": "the desired center latitude"
+                },
+                {
+                    "name": "lon",
+                    "description": "the desired center longitude"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "MapHelper",
+            "module": "model"
+        },
+        {
+            "file": "dev\\prototypes\\maphelper.js",
+            "line": 94,
+            "description": "Creates a standard marker (the blue one if using Leaflet) on the given map point, optionally binding to it a popup.\n\tThe popup should be valid HTML content, and will appear when clicking the marker",
+            "itemtype": "method",
+            "name": "stdMrker",
+            "params": [
+                {
+                    "name": "lat",
+                    "description": "the desired marker latitude"
+                },
+                {
+                    "name": "lon",
+                    "description": "the desired marker longitude"
+                },
+                {
+                    "name": "popup",
+                    "description": "HTML content to be treated as a marker popup"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "MapHelper",
+            "module": "model"
+        },
+        {
+            "file": "dev\\prototypes\\maphelper.js",
+            "line": 111,
+            "description": "Creates a user marker (defined by the image URL used) on the given map point.",
+            "itemtype": "method",
+            "name": "userMarker",
+            "params": [
+                {
+                    "name": "lat",
+                    "description": "the desired marker latitude"
+                },
+                {
+                    "name": "lon",
+                    "description": "the desired marker longitude"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "MapHelper",
+            "module": "model"
+        },
+        {
+            "file": "dev\\prototypes\\misurazione.js",
+            "line": 28,
+            "description": "Initializes default values, to ensure basic data can be provided.\nGets called everytime a new object is created",
+            "itemtype": "method",
+            "name": "defaults",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "Misurazione",
+            "module": "airdata",
+            "submodule": "measures"
+        },
+        {
+            "file": "dev\\prototypes\\misure.js",
+            "line": 27,
+            "description": "Identifies the objects the collection will hold",
+            "itemtype": "property",
+            "name": "model",
+            "type": "Class",
+            "static": 1,
+            "final": 1,
+            "class": "Misure",
+            "module": "airdata"
+        },
+        {
+            "file": "dev\\prototypes\\modalhelper.js",
+            "line": 27,
+            "description": "Initializes default values, to ensure basic data can be provided.\nGets called everytime a new object is created",
+            "itemtype": "method",
+            "name": "defaults",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "ModalHelper",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\prototypes\\modalhelper.js",
+            "line": 40,
+            "description": "Shows the \"loading data\" dialog",
+            "itemtype": "method",
+            "name": "showLoading",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "ModalHelper",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\prototypes\\modalhelper.js",
+            "line": 50,
+            "description": "Hides the \"loading data\" dialog",
+            "itemtype": "method",
+            "name": "hideLoading",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "ModalHelper",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\prototypes\\modalhelper.js",
+            "line": 60,
+            "description": "Shows the \"error\" modal dialog. Shows the non-modal (can't be closed) version or the dismissable one, according to the parameter given.\n\tA dismissable value of 0 means the user can't close the dialog (Useful in case of blocking error, i.e. no internet connection)",
+            "itemtype": "method",
+            "name": "showError",
+            "params": [
+                {
+                    "name": "dismissable",
+                    "description": "whether the user can close the error dialog or not"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "ModalHelper",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\prototypes\\o3.js",
+            "line": 26,
+            "description": "Returns formatted date without minutes and seconds",
+            "itemtype": "method",
+            "name": "sample_date",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "O3",
+            "module": "airdata",
+            "submodule": "measures"
+        },
+        {
+            "file": "dev\\prototypes\\page.js",
+            "line": 27,
+            "description": "Initializes default values, to ensure basic data can be provided.\nGets called everytime a new object is created",
+            "itemtype": "method",
+            "name": "defaults",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "Page",
+            "module": "model"
+        },
+        {
+            "file": "dev\\prototypes\\pm10.js",
+            "line": 26,
+            "description": "Returns formatted date without time information",
+            "itemtype": "method",
+            "name": "sample_date",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "PM10",
+            "module": "airdata",
+            "submodule": "measures"
+        },
+        {
+            "file": "dev\\prototypes\\province.js",
+            "line": 27,
+            "description": "Identifies the objects the collection will hold",
+            "itemtype": "property",
+            "name": "model",
+            "type": "Class",
+            "static": 1,
+            "final": 1,
+            "class": "Province",
+            "module": "airdata"
+        },
+        {
+            "file": "dev\\prototypes\\provincia.js",
+            "line": 27,
+            "description": "Initializes default values, to ensure basic data can be provided.\nGets called everytime a new object is created",
+            "itemtype": "method",
+            "name": "defaults",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "Provincia",
+            "module": "airdata"
+        },
+        {
+            "file": "dev\\prototypes\\settings.js",
+            "line": 27,
+            "description": "Initializes default values, to ensure basic data can be provided.\nGets called everytime a new object is created",
+            "itemtype": "method",
+            "name": "defaults",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "Settings",
+            "module": "model"
+        },
+        {
+            "file": "dev\\prototypes\\settings.js",
+            "line": 41,
+            "description": "Checks and returns if the user has turned on the alert system",
+            "itemtype": "method",
+            "name": "isAlertActive",
+            "return": {
+                "description": "bool\t0 if alert is turned off, 1 otherwise"
+            },
+            "class": "Settings",
+            "module": "model"
+        },
+        {
+            "file": "dev\\prototypes\\settings.js",
+            "line": 57,
+            "description": "Sets and returns the given status to the alert system.",
+            "itemtype": "method",
+            "name": "setAlertActive",
+            "params": [
+                {
+                    "name": "bool",
+                    "description": "0 if we want to turn off the alert system, 1 otherwise"
+                }
+            ],
+            "return": {
+                "description": "bool\t0 if alert is turned off, 1 otherwise"
+            },
+            "class": "Settings",
+            "module": "model"
+        },
+        {
+            "file": "dev\\prototypes\\settings.js",
+            "line": 70,
+            "description": "Retrieves and returns the stations that the user added to his favourites",
+            "itemtype": "method",
+            "name": "getSavedStations",
+            "return": {
+                "description": "Object\ta collection of station codes"
+            },
+            "class": "Settings",
+            "module": "model"
+        },
+        {
+            "file": "dev\\prototypes\\settings.js",
+            "line": 80,
+            "description": "Checks and returns if the given station is a user favourite one",
+            "itemtype": "method",
+            "name": "isStationStarred",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "the id of the station we want to check"
+                }
+            ],
+            "return": {
+                "description": "bool\t0 if the station is not favourite, 1 otherwise"
+            },
+            "class": "Settings",
+            "module": "model"
+        },
+        {
+            "file": "dev\\prototypes\\settings.js",
+            "line": 97,
+            "description": "Toggles the station's favourite status: if a station is starred, removes it from the list. If a station is not starred, adds it",
+            "itemtype": "method",
+            "name": "toggleStationAlert",
+            "return": {
+                "description": "void"
+            },
+            "class": "Settings",
+            "module": "model"
+        },
+        {
+            "file": "dev\\views\\_centralinaitem.js",
+            "line": 27,
+            "description": "Identifies the template this view will use, in form of CSS/jQuery selector",
+            "itemtype": "property",
+            "name": "template",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "class": "CentralinaItem",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\_centralinaitem.js",
+            "line": 37,
+            "description": "Identifies the tag this view will use to render the element, in the form of CSS/jQuery selector",
+            "itemtype": "property",
+            "name": "tagName",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "class": "CentralinaItem",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\_centralinaitem.js",
+            "line": 47,
+            "description": "Events hash, binding events in the form\n\t\"event DOMObject\" (as in \"click #my_elem\")\nto methods.",
+            "itemtype": "property",
+            "name": "events",
+            "type": "Object",
+            "static": 1,
+            "final": 1,
+            "class": "CentralinaItem",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\_centralinaitem.js",
+            "line": 61,
+            "description": "Navigates the application to the station data page",
+            "itemtype": "method",
+            "name": "statdetails",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "CentralinaItem",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\_provinciaitem.js",
+            "line": 27,
+            "description": "Identifies the template this view will use, in form of CSS/jQuery selector",
+            "itemtype": "property",
+            "name": "template",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "class": "ProvinciaItem",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\_provinciaitem.js",
+            "line": 37,
+            "description": "Identifies the tag this view will use to render the element, in the form of CSS/jQuery selector",
+            "itemtype": "property",
+            "name": "tagName",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "class": "ProvinciaItem",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\_provinciaitem.js",
+            "line": 47,
+            "description": "Events hash, binding events in the form\n\t\"event DOMObject\" (as in \"click #my_elem\")\nto methods.",
+            "itemtype": "property",
+            "name": "events",
+            "type": "Object",
+            "static": 1,
+            "final": 1,
+            "class": "ProvinciaItem",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\_provinciaitem.js",
+            "line": 61,
+            "description": "Navigates the application to the province data page, where all the station in the given province will be shown",
+            "itemtype": "method",
+            "name": "provincia",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "ProvinciaItem",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinaalertview.js",
+            "line": 28,
+            "description": "Method automatically called at every instantiation, to bind needed events and listeners",
+            "itemtype": "method",
+            "name": "initialize",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "CentralinaAlertView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinaalertview.js",
+            "line": 43,
+            "description": "Events hash, binding events in the form\n\t\"event DOMObject\" (as in \"click #my_elem\")\nto methods.",
+            "itemtype": "property",
+            "name": "events",
+            "type": "Object",
+            "static": 1,
+            "final": 1,
+            "class": "CentralinaAlertView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinaalertview.js",
+            "line": 57,
+            "description": "Toggles the starred state from the station in the application settings, and updates the model",
+            "itemtype": "method",
+            "name": "toggle_ozone",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "CentralinaAlertView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinaalertview.js",
+            "line": 68,
+            "description": "Identifies the template this view will use, in form of CSS/jQuery selector",
+            "itemtype": "property",
+            "name": "template",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "class": "CentralinaAlertView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinaalertview.js",
+            "line": 78,
+            "description": "Renders the view of the given template onto the DOM, using the standard Backbone way to render templates",
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "this\tto notify caller views (if any) about the rendering"
+            },
+            "class": "CentralinaAlertView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinapopupmap.js",
+            "line": 27,
+            "description": "Identifies the template this view will use, in form of CSS/jQuery selector",
+            "itemtype": "property",
+            "name": "template",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "class": "CentralinaPopupMap",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinapopupmap.js",
+            "line": 37,
+            "description": "Events hash, binding events in the form\n\t\"event DOMObject\" (as in \"click #my_elem\")\nto methods.",
+            "itemtype": "property",
+            "name": "events",
+            "type": "Object",
+            "static": 1,
+            "final": 1,
+            "class": "CentralinaPopupMap",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinapopupmap.js",
+            "line": 51,
+            "description": "Navigates the application to the station data page",
+            "itemtype": "method",
+            "name": "statdetails",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "CentralinaPopupMap",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinaview.js",
+            "line": 27,
+            "description": "Method automatically called at every instantiation, to bind needed events and listeners",
+            "itemtype": "method",
+            "name": "initialize",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "CentralinaView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinaview.js",
+            "line": 63,
+            "description": "Events hash, binding events in the form\n\t\"event DOMObject\" (as in \"click #my_elem\")\nto methods.",
+            "itemtype": "property",
+            "name": "events",
+            "type": "Object",
+            "static": 1,
+            "final": 1,
+            "class": "CentralinaView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinaview.js",
+            "line": 78,
+            "description": "Toggles the starred state from the station in the application settings, and updates the model",
+            "itemtype": "method",
+            "name": "toggle_ozone",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "CentralinaView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinaview.js",
+            "line": 89,
+            "description": "Navigates the application to the validated data page",
+            "itemtype": "method",
+            "name": "cop",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "CentralinaView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinaview.js",
+            "line": 101,
+            "description": "Identifies the template this view will use, in form of CSS/jQuery selector",
+            "itemtype": "property",
+            "name": "template",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "class": "CentralinaView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinaview.js",
+            "line": 111,
+            "description": "Identifies the tag this view will use to render the element, in the form of CSS/jQuery selector",
+            "itemtype": "property",
+            "name": "tagName",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "class": "CentralinaView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinaview.js",
+            "line": 121,
+            "description": "Utility method to find the starting date from a set of dates, and return it as a timestamp",
+            "itemtype": "method",
+            "name": "getStartDate",
+            "params": [
+                {
+                    "name": "set",
+                    "description": "a set of dates in the format YYYY-MM-DD HH:MM:SS"
+                }
+            ],
+            "return": {
+                "description": "int\ttimestamp of the starting date from the set"
+            },
+            "class": "CentralinaView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinaview.js",
+            "line": 133,
+            "description": "Utility method to create an array of samples from a set of PM10 or Ozone measure objects",
+            "itemtype": "method",
+            "name": "getValues",
+            "params": [
+                {
+                    "name": "set",
+                    "description": "a set of objects adhering to the Misura interface"
+                }
+            ],
+            "return": {
+                "description": "Array\tthe array of numerical samples"
+            },
+            "class": "CentralinaView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinaview.js",
+            "line": 152,
+            "description": "Plots the Ozone data graph. Has to check if ozone samples exist, and then calles the correct implementation based on the SVG implementation:\n\t- If <html> has the SVG class (appended by the feature detection library Modernizr) we can render the Highcharts.js chart\n\t- If <html> has no SVG class, we fallback to the Graph.js chart",
+            "itemtype": "method",
+            "name": "plotOzono",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "CentralinaView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinaview.js",
+            "line": 171,
+            "description": "Builds a Highcharts.js ozone chart, passing the needed options to the constructor",
+            "itemtype": "method",
+            "name": "ozonoHighcharts",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "CentralinaView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinaview.js",
+            "line": 275,
+            "description": "Builds a Graph.js chart, passing the needed options to the constructor.\n\thas to do some pre-processing, to create an array of dates, because this is not automatic as in Highcharts",
+            "itemtype": "method",
+            "name": "ozonoChart",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "CentralinaView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinaview.js",
+            "line": 332,
+            "description": "Plots the PM10 data graph. Has to check if PM10 samples exist, and then calles the correct implementation based on the SVG implementation:\n\t- If <html> has the SVG class (appended by the feature detection library Modernizr) we can render the Highcharts.js chart\n\t- If <html> has no SVG class, we fallback to the Graph.js chart",
+            "itemtype": "method",
+            "name": "plotPM10",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "CentralinaView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinaview.js",
+            "line": 352,
+            "description": "Builds a Highcharts.js PM10 chart, passing the needed options to the constructor",
+            "itemtype": "method",
+            "name": "PM10Highcharts",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "CentralinaView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinaview.js",
+            "line": 452,
+            "description": "Builds a Graph.js chart, passing the needed options to the constructor.\n\thas to do some pre-processing, to create an array of dates, because this is not automatic as in Highcharts",
+            "itemtype": "method",
+            "name": "ozonoChart",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "CentralinaView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinelist.js",
+            "line": 27,
+            "description": "Identifies the itemView used to render the items of the passed collection",
+            "itemtype": "property",
+            "name": "itemView",
+            "type": "Class",
+            "static": 1,
+            "final": 1,
+            "class": "CentralineList",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinelist.js",
+            "line": 37,
+            "description": "Identifies the container where actual items will be rendered, in form of CSS/jQuery selector",
+            "itemtype": "property",
+            "name": "itemViewContainer",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "class": "CentralineList",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinelist.js",
+            "line": 47,
+            "description": "Identifies the template this view will use, in form of CSS/jQuery selector",
+            "itemtype": "property",
+            "name": "template",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "class": "CentralineList",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\centralinelist.js",
+            "line": 57,
+            "description": "Method automatically called at every instantiation, to bind needed events and listeners",
+            "itemtype": "method",
+            "name": "initialize",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "CentralineList",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\copview.js",
+            "line": 27,
+            "description": "Method automatically called at every instantiation, to bind needed events and listeners",
+            "itemtype": "method",
+            "name": "initialize",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "Copview",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\copview.js",
+            "line": 42,
+            "description": "Identifies the template this view will use, in form of CSS/jQuery selector",
+            "itemtype": "property",
+            "name": "template",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "class": "Copview",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\copview.js",
+            "line": 52,
+            "description": "Identifies the tag this view will use to render the element, in the form of CSS/jQuery selector",
+            "itemtype": "property",
+            "name": "tagName",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "class": "Copview",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\mainview.js",
+            "line": 27,
+            "description": "Method automatically called at every instantiation, to bind needed events and listeners",
+            "itemtype": "method",
+            "name": "initialize",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "MainView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\mainview.js",
+            "line": 38,
+            "description": "Identifies the template this view will use, in form of CSS/jQuery selector",
+            "itemtype": "property",
+            "name": "template",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "class": "MainView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\mainview.js",
+            "line": 48,
+            "description": "Events hash, binding events in the form\n\t\"event DOMObject\" (as in \"click #my_elem\")\nto methods.",
+            "itemtype": "property",
+            "name": "events",
+            "type": "Object",
+            "static": 1,
+            "final": 1,
+            "class": "MainView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\mainview.js",
+            "line": 66,
+            "description": "Navigates the application to the \"map\" state",
+            "itemtype": "method",
+            "name": "map",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "MainView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\mainview.js",
+            "line": 78,
+            "description": "Navigates the application to the \"list\" state",
+            "itemtype": "method",
+            "name": "list",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "MainView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\mainview.js",
+            "line": 90,
+            "description": "Navigates the application to the \"settings\" state",
+            "itemtype": "method",
+            "name": "settings",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "MainView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\mainview.js",
+            "line": 102,
+            "description": "Navigates the application to the data view of the station marked as the closest one monitoring ozone",
+            "itemtype": "method",
+            "name": "closestOzone",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "MainView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\mainview.js",
+            "line": 114,
+            "description": "Navigates the application to the data view of the station marked as the closest one monitoring PM10",
+            "itemtype": "method",
+            "name": "closestPM10",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "MainView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\mapview.js",
+            "line": 27,
+            "description": "Method automatically called at every instantiation, to bind needed events and listeners",
+            "itemtype": "method",
+            "name": "initialize",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "MapView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\mapview.js",
+            "line": 48,
+            "description": "Identifies the template this view will use, in form of CSS/jQuery selector",
+            "itemtype": "property",
+            "name": "template",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "class": "MapView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\provincelist.js",
+            "line": 28,
+            "description": "Identifies the itemView used to render the items of the passed collection",
+            "itemtype": "property",
+            "name": "itemView",
+            "type": "Class",
+            "static": 1,
+            "final": 1,
+            "class": "CentralineList",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\provincelist.js",
+            "line": 38,
+            "description": "Identifies the container where actual items will be rendered, in form of CSS/jQuery selector",
+            "itemtype": "property",
+            "name": "itemViewContainer",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "class": "CentralineList",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\provincelist.js",
+            "line": 48,
+            "description": "Identifies the template this view will use, in form of CSS/jQuery selector",
+            "itemtype": "property",
+            "name": "template",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "class": "CentralineList",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\provincelist.js",
+            "line": 58,
+            "description": "Method automatically called at every instantiation, to bind needed events and listeners",
+            "itemtype": "method",
+            "name": "initialize",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "CentralineList",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\settingsview.js",
+            "line": 27,
+            "description": "Identifies the template this view will use, in form of CSS/jQuery selector",
+            "itemtype": "property",
+            "name": "template",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "class": "SettingsView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\settingsview.js",
+            "line": 37,
+            "description": "Method automatically called at every instantiation, to bind needed events and listeners",
+            "itemtype": "method",
+            "name": "initialize",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "SettingsView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\settingsview.js",
+            "line": 53,
+            "description": "Events hash, binding events in the form\n\t\"event DOMObject\" (as in \"click #my_elem\")\nto methods.",
+            "itemtype": "property",
+            "name": "events",
+            "type": "Object",
+            "static": 1,
+            "final": 1,
+            "class": "SettingsView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\settingsview.js",
+            "line": 70,
+            "description": "Calls the Settings method to turn on the Alert system",
+            "itemtype": "method",
+            "name": "ozone_on",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "SettingsView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\settingsview.js",
+            "line": 80,
+            "description": "Calls the Settings method to turn off the Alert system",
+            "itemtype": "method",
+            "name": "ozone_off",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "SettingsView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\settingsview.js",
+            "line": 90,
+            "description": "Navigates the application to the data view for the clicked station",
+            "itemtype": "method",
+            "name": "centralina",
+            "params": [
+                {
+                    "name": "ev",
+                    "description": "gets automatically passed by Javascript, and holds information about the event that called this method"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "SettingsView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\settingsview.js",
+            "line": 104,
+            "description": "Removes the clicked station from the starred/favourite list",
+            "itemtype": "method",
+            "name": "unsubscribe",
+            "params": [
+                {
+                    "name": "ev",
+                    "description": "gets automatically passed by Javascript, and holds information about the event that called this method"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "SettingsView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\topview.js",
+            "line": 27,
+            "description": "Identifies the template this view will use, in form of CSS/jQuery selector",
+            "itemtype": "property",
+            "name": "template",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "class": "TopView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\topview.js",
+            "line": 37,
+            "description": "Events hash, binding events in the form\n\t\"event DOMObject\" (as in \"click #my_elem\")\nto methods.",
+            "itemtype": "property",
+            "name": "events",
+            "type": "Object",
+            "static": 1,
+            "final": 1,
+            "class": "TopView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\topview.js",
+            "line": 53,
+            "description": "Navigates the application back. This will be used by the simil-iPhone back button",
+            "itemtype": "method",
+            "name": "back",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "TopView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\topview.js",
+            "line": 63,
+            "description": "Asks the geolocation manager to geolocalize the user",
+            "itemtype": "method",
+            "name": "geoloc_map",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "TopView",
+            "module": "controller"
+        },
+        {
+            "file": "dev\\views\\topview.js",
+            "line": 73,
+            "description": "Triggers the COP event. \n\tAnyone can listen to this event, currently the Controller listens it to start downloading validated data and then instantiate the view",
+            "itemtype": "method",
+            "name": "cop",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "TopView",
+            "module": "controller"
+        }
+    ],
+    "warnings": []
+}

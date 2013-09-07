@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>DataParser - apparpavaria</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../assets/css/logo.png" title="apparpavaria"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 1.0.0</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/Airdata.html">Airdata</a></li>
+            
+                <li><a href="../classes/AppController.html">AppController</a></li>
+            
+                <li><a href="../classes/AriaRouter.html">AriaRouter</a></li>
+            
+                <li><a href="../classes/Centralina.html">Centralina</a></li>
+            
+                <li><a href="../classes/CentralinaAlertView.html">CentralinaAlertView</a></li>
+            
+                <li><a href="../classes/CentralinaItem.html">CentralinaItem</a></li>
+            
+                <li><a href="../classes/CentralinaPopupMap.html">CentralinaPopupMap</a></li>
+            
+                <li><a href="../classes/CentralinaView.html">CentralinaView</a></li>
+            
+                <li><a href="../classes/CentralineList.html">CentralineList</a></li>
+            
+                <li><a href="../classes/CopTable.html">CopTable</a></li>
+            
+                <li><a href="../classes/Copview.html">Copview</a></li>
+            
+                <li><a href="../classes/DataParser.html">DataParser</a></li>
+            
+                <li><a href="../classes/DataProvider.html">DataProvider</a></li>
+            
+                <li><a href="../classes/GeoHelper.html">GeoHelper</a></li>
+            
+                <li><a href="../classes/MainView.html">MainView</a></li>
+            
+                <li><a href="../classes/MapHelper.html">MapHelper</a></li>
+            
+                <li><a href="../classes/MapView.html">MapView</a></li>
+            
+                <li><a href="../classes/Misurazione.html">Misurazione</a></li>
+            
+                <li><a href="../classes/Misure.html">Misure</a></li>
+            
+                <li><a href="../classes/ModalHelper.html">ModalHelper</a></li>
+            
+                <li><a href="../classes/O3.html">O3</a></li>
+            
+                <li><a href="../classes/Page.html">Page</a></li>
+            
+                <li><a href="../classes/PM10.html">PM10</a></li>
+            
+                <li><a href="../classes/Province.html">Province</a></li>
+            
+                <li><a href="../classes/Provincia.html">Provincia</a></li>
+            
+                <li><a href="../classes/ProvinciaItem.html">ProvinciaItem</a></li>
+            
+                <li><a href="../classes/Settings.html">Settings</a></li>
+            
+                <li><a href="../classes/SettingsView.html">SettingsView</a></li>
+            
+                <li><a href="../classes/TopView.html">TopView</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/airdata.html">airdata</a></li>
+            
+                <li><a href="../modules/controller.html">controller</a></li>
+            
+                <li><a href="../modules/measures.html">measures</a></li>
+            
+                <li><a href="../modules/model.html">model</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>DataParser Class</h1>
+<div class="box meta">
+    
+
+    
+        <div class="extends">
+            Extends Backbone.Model
+        </div>
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="../files/dev_controllers_dataparser.js.html#l18"><code>dev\controllers\dataparser.js:18</code></a>
+        </div>
+    
+
+    
+        
+            Module: <a href="../modules/controller.html">controller</a>
+        
+    
+
+    
+</div>
+
+
+
+<div class="box intro">
+    <p>Parses JSON files and initializes the correct instances of our model objects</p>
+
+</div>
+
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+        <div id="method_DataParser" class="method item">
+    <h3 class="name"><code>DataParser</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/dev_controllers_dataparser.js.html#l18"><code>dev\controllers\dataparser.js:18</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+    </div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+        
+        
+        
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods extends">
+                        
+                            <li class="index-item method">
+                                <a href="#method_parseAll">parseAll</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_parseCop">parseCop</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+
+            
+
+            
+        </div>
+
+        
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+                
+                    <div id="method_parseAll" class="method item">
+    <h3 class="name"><code>parseAll</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>dataProvider</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Void</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/dev_controllers_dataparser.js.html#l27"><code>dev\controllers\dataparser.js:27</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Uses the given dataProvider to retrieve station data, properties and coordinates. Populates Centralina objects and creates our Airdata collection</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">dataProvider</code>
+                        <span class="type">Object</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>an instance of DataProvider</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Void</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_parseCop" class="method item">
+    <h3 class="name"><code>parseCop</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>xmlData</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>id</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Void</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/dev_controllers_dataparser.js.html#l129"><code>dev\controllers\dataparser.js:129</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Uses the given dataProvider to retrieve validated data URL, retrieves it with an AJAX call and populates a CopTable object, setting it to its station</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">xmlData</code>
+                        <span class="type">Object</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>the URL of the XML to be parsed</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">id</code>
+                        <span class="type">Object</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The station whose validated data are to be parsed</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Void</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+            </div>
+        
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

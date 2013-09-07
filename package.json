@@ -1,0 +1,20 @@
+{
+  "name": "apparpavaria",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniele Lain - <daniele_lain@libero.it>",
+  "homepage": "arpa.veneto.it",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-jsbeautifier": "~0.1.9",
+    "grunt-contrib-yuidoc": "~0.4.0",
+    "grunt-contrib-jst": "~0.5.1"
+  }
+}

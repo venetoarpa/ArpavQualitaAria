@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/application.css" />
+		<link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+		<link rel="stylesheet" type="text/css" href="css/overrides.css" />
+        <title>Qualità Aria</title>
+    </head>
+    <body>
+	
+	 <div id='topnav' class='topnav navbar-fixed-top'></div>
+	 <div id='content'></div>
+	 
+	 <div class='modal hide fade' id='loadingmodal' data-backdrop="static" data-keyboard="false"><div class='modal-body'><p>Aggiornamento dati. Attendere</p></div></div>
+	 <div class='modal hide fade' id='errormodal' data-backdrop="static" data-keyboard="false"><div class='modal-body'><p>Errore nel recupero dei dati.</p><p>L'applicazione necessita di una connessione ad internet attiva.</p></div></div>
+	 <div class='modal hide fade' id='errormodalclose' data-backdrop="static" data-keyboard="false"><div class='modal-body'><p>La funzione necessita di una connessione ad internet attiva.</p><button class="btn" data-dismiss="modal" aria-hidden="true">Ok</button></div></div>
+	 
+	 <div id='splashscreen'></div>
+    
+	<script id='top_page' type='js/template'>
+	<% if (logo_show === 1) { %>
+      <div id='header' class='head' >
+		<img src='./img/banner.png' class='banner'/>
+      </div>
+	  <% } %>
+	  <div id='title'>
+		<div class='row-fluid topmenu'>
+		<div class='span3' id='headleft'>
+			<% if (left_show !== 0) { %> <a <% if (left_id !== '') { %> id='<%= left_id %>' <% } %> class='btn navbtn'><%= left_text %></a><% } %>
+		</div>
+		<div class='span6' id='headcenter'>
+			<h1 class='text-center title'><%= center %><h1>
+		</div>
+		<div class='span3' id='headright'>
+			<% if (right_show !== 0) { %> <a <% if (right_id !== '') { %> id='<%= right_id %>' <% } %> class='btn navbtn pull-right'><i class='<% if(right_icon !== '') { %><%= right_icon %> topicon <% } %>'><%= right_text %></i></a><% } %>
+		</div>
+	  </div>
+	 </div>
+	</script>
+    
+    
+      <script id='main_test' type='js/template'>  
+	  <br>
+	  <br>
+	  <div id='closest' class='well'>
+	  <p>Dati in diretta:</p>
+	  <% if (isGeoLocalized === 1 && (closestOzone !== 0 || closestPM10 !== 0)) { %>
+	  <dl>
+		<dt>Ozono:</dt>
+			<dd><small><a id='closestOzone'>Stazione <%= closestOzoneName %> [~<% print((closestOzoneDist/1000).toFixed(2)) %> km]</a></small></dd>
+			<dd> <%= closestOzone %> µg/m<sup>3</sup> <small>rilevati il <%= closestOzoneDate %></small></dd>
+			<dd><small>Qualità dell'aria
+			<%
+			if (closestOzone > 240)
+				print('pessima');
+			else if (closestOzone > 180)
+				print('scadente');
+			else if (closestOzone > 120)
+				print('discreta');
+			else
+				print('buona');
+			%>
+			</small></dd>
+		<dt>PM10:</dt>
+			<dd><small><a id='closestPM10'>Stazione <%= closestPM10Name %> [~<% print((closestPM10Dist/1000).toFixed(2)) %> km]</a></small></dd>
+			<dd> <%= closestPM10 %> µg/m<sup>3</sup> <small>rilevati il <%= closestPM10Date %></small></dd>
+			<dd><small>Qualità dell'aria
+			<%
+			if (closestPM10 > 100)
+				print('pessima');
+			else if (closestPM10 > 50)
+				print('scadente');
+			else
+				print('buona');
+			%>
+			</small></dd>
+	  </dl>
+	  <% } else { %>
+	  <p class='small'>Ricerca delle stazioni di monitoraggio più vicine in corso...</p>
+	  <% } %>
+	  </div>
+	  <ul class="nav nav-tabs nav-stacked menu">
+	    <li><a id='maplink'>Visualizza la mappa</a></li>
+	    <li><a id='listlink'>Elenco stazioni</a></li>
+		<li><a id='settingslink'>Visualizza i preferiti</a></li>
+	  </ul>
+      </script>
+	  
+	  
+      
+      <script id='statlistel' type='js/template'>
+      <a class='statlist_elem'>
+		<p class='lead'><%= nome %></p>
+		<i class="icon-chevron-right pull-right"></i>
+		<address><span> ( <% if(citta != provincia) { %> <%= citta %>, <%= provincia %> <% } else { %> <%= citta %> <% }  %>) </span></address>
+		<small class='muted'>
+			<% if (mis_o3.length == 0 && mis_pm10.length == 0) { print('Solo dati validati'); } else { %>
+				Dati in diretta: <br>
+				<% if (mis_o3.length != 0 ) { print('Ozono <br>'); } %>
+				<% if (mis_pm10.length != 0 ) { print('PM10'); } %>
+			<% } %>
+		</small>
+	  </a>
+      </script>
+	  
+	  <script id='provlistel' type='js/template'>
+      <a class='statlist_elem'>
+      		<i class="icon-chevron-right pull-right provinceicon"></i>
+		<p class='lead'><%= nome %></p>
+	  </a>
+      </script>
+	  
+	  <script id='statlist' type='js/template'>
+	  <p id='_nav-top' class='anchorfix'></p>
+	  <ul class='nav nav-tabs nav-stacked' id='centraline'></ul>
+	  <div id='footer'>
+		<a href='#_nav-top'>Torna su</a>
+	  </div>
+      </script>
+	  
+	  <script id='details' type='js/template'>
+	  <p id='_nav-top' class='anchorfix'></p>
+		<address id='top'>
+		<strong><%= nome %></strong><br>
+		<%= citta %> (<%= provincia %>)<br>
+		Tipologia: <%= tipologia %><br>
+		</address>
+		<% if (nodata === 1) { %>
+	  <p>Non sono disponibili dati in diretta per questa stazione.</p>
+	  <p>Sono disponibili i dati validati relativi alla giornata di ieri:</p>
+	  <br>
+	  <% }%>
+	  <div id='diretta'></div>
+	  
+	  <% if (typeof maxo3 !== 'undefined') { %>
+	  <h2 class='text-center'>Ozono</h2>
+	  <h3 class='text-center'>Dati in diretta</h3>
+	  <div id='ozono-hc'></div>
+	  <canvas id='ozono-canvas' height='300'></canvas>	  
+		<p>Picco massimo di ozono: <b><%= maxo3.get('sample') %> µg/m<sup>3</sup></b> misurato il <% var d = new Date(maxo3.get('date').split(' ')[0]); print(d.getDate() + '/' + (parseInt(d.getMonth())+1) + '/' + d.getFullYear()); %> ore <%= maxo3.get('date').split(' ')[1].split(':')[0]  %>:00</p>
+		<p>(Misurazioni effettuate dal <% var d = new Date(mis_o3.first().get('date').split(' ')[0]); print(d.getDate() + '/' + (parseInt(d.getMonth())+1) + '/' + d.getFullYear()); %> ore <%= mis_o3.first().get('date').split(' ')[1].split(':')[0]  %>:00 al <% var d = new Date(mis_o3.last().get('date').split(' ')[0]); print(d.getDate() + '/' + (parseInt(d.getMonth())+1) + '/' + d.getFullYear()); %> ore <%= mis_o3.last().get('date').split(' ')[1].split(':')[0]  %>:00)</p>
+		<small>Per ulteriori informazioni sull'ozono e sulle diverse soglie <a href='http://www.arpa.veneto.it/temi-ambientali/aria/a-proposito-di-ozono' rel="external" target='_system'>visita questa pagina</a></small>
+		<br>
+		<a href='#_nav-top'>Torna su</a>
+		<% } %>
+		<br>
+		<br>
+		
+	  <% if (typeof maxpm10 !== 'undefined') { %>
+	  <h2 class='text-center'>PM10</h2>
+	  <h3 class='text-center'>Dati in diretta</h3>
+	  <div id='pm10-hc'></div>
+	  <canvas id='pm10-canvas' height='300'></canvas>	
+	  
+		<p>Picco massimo di PM10: 
+		<b><%= maxpm10.get('sample') %> µg/m<sup>3</sup></b> misurato il <% var d = new Date(maxpm10.get('date').split(' ')[0]); print(d.getDate() + '/' + (parseInt(d.getMonth())+1) + '/' + d.getFullYear()); %></p>
+		<p>(Misurazioni effettuate dal <% var d = new Date(mis_pm10.first().get('date').split(' ')[0]); print(d.getDate() + '/' + (parseInt(d.getMonth())+1) + '/' + d.getFullYear()); %> al <% var d = new Date(mis_pm10.last().get('date').split(' ')[0]); print(d.getDate() + '/' + (parseInt(d.getMonth())+1) + '/' + d.getFullYear()); %>)</p>
+		<small>Per ulteriori informazioni sui PM10 e sulle diverse soglie <a href='http://www.arpa.veneto.it/bollettini/htm/rete_pm10.asp' rel="external" target='_system'>visita questa pagina</a></small><br>
+		<a href='#_nav-top'>Torna su</a>
+		<% } %>
+		
+		<a class="btn btn-large btn-block cop">Dati validati</a>
+		<div id='ozono-starred'></div>
+      </script>
+	  
+	  <script id='toggle-ozone' type='js/template'>
+	  <% if (typeof ozonoStarred !== 'undefined') { %>
+			<% if (ozonoStarred === 0) { %><a class="btn btn-large btn-block toggle-ozone">Aggiungi ai preferiti</a>
+			<% } else { %>
+			<a class="btn btn-large btn-block toggle-ozone disabled">Stazione tra i preferiti</a>
+			<a class="btn btn-large btn-block toggle-ozone">Rimuovere la stazione dai preferiti?</a>
+			<% } %>
+		<% } %>
+	  </script>
+	  
+	  <script id='map-tpl' type='js/template'>
+	  <div id='map' name='map'></div>
+	  </script>
+
+       <script id='opts-tpl' type='js/template'>
+       	   <% if (false) { %>
+	   <p>Il servizio di allerta ozono ti permette di essere sempre informato in caso di situazioni di allerta.</p>
+	   <p>Potrai iscriverti alle stazioni di tuo interesse, riceverai una notifica direttamente sul tuo telefono nel caso si presenti una situazione di allerta presso una di esse.</p>
+	   <p>Il servizio può essere disattivato, per una singola stazione o globalmente, in ogni momento.</p>
+	   <br>
+       <% if (alert_status === 0) { %><a class="btn btn-large btn-block toggle-ozone" id='ozone_activate'>Attiva il servizio di allerta</a>
+			<a class="btn btn-large btn-block toggle-ozone disabled" id='ozone_deactivate'>Servizio di allerta non attivo</a>
+			<% } else { %>
+			<a class="btn btn-large btn-block toggle-ozone disabled" id='ozone_activate'>Servizio di allerta attivo</a>
+			<a class="btn btn-large btn-block toggle-ozone" id='ozone_deactivate'>Disattivare il servizio di allerta?</a>
+			<% } %>
+			<br>
+			<br>
+	<% } %>
+	<% if (AA.settings.getSavedStations().length === 0) { %>
+		<p>Non hai ancora inserito nessuna stazione tra le preferite!</p>
+		<p>Aggiungi le centraline di tuo interesse ai preferiti, per un accesso più veloce in futuro.</p>
+	<% } %>
+		<ul class='nav nav-tabs nav-stacked' id='centraline'>
+			<% _.each(AA.settings.getSavedStations(), function(id) {
+				var model = AA.airdata.findWhere({
+					codseqst: id
+				}); %>				
+				<li><a id='<%= id %>' class='centralina'><p class='lead'><%= model.get('nome') %></p>
+				<button class='btn btn-large pull-right unsubscribe'>Rimuovi</button>
+				<address><span> ( <% if(model.get('citta') != model.get('provincia')) { %> <%= model.get('citta') %>, <%= model.get('provincia') %> <% } else { %> <%= model.get('citta') %> <% }  %>) </span></address>
+				<small class='muted'>
+					<% if (model.get('mis_o3').length == 0 && model.get('mis_pm10').length == 0) { print('Solo dati validati'); } else { %>
+						Dati in diretta: <br>
+						<% if (model.get('mis_o3').length != 0 ) { print('Ozono <br>'); } %>
+						<% if (model.get('mis_pm10').length != 0 ) { print('PM10'); } %>
+					
+					<% } %>
+				</small></a>
+				</li>
+			<% }); %>		
+		</ul>
+       </script>
+       
+       
+       <script id='coptable' type='js/template'>
+	   <h1 class='text-center'>Stazione <%= nome%></h1>
+       <table class="table table-striped">
+	   <caption>Bollettino del <% var date = new Date(data.replace(' ','T')); print(date.getDate() + '/' + (date.getMonth()+1) + '/' + date.getFullYear()); %> Dati riferiti al <% var date = new Date(data_rif.replace(' ','T')); print(date.getDate() + '/' + (date.getMonth()+1) + '/' + date.getFullYear()); %></caption>
+	  <thead>
+	    <tr>
+	      <th>Parametro</th>
+	      <th>Dato rilevato</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>NO<sub>2</sub> - massimo orario</td>
+	      <% if ( conc_no2 == 'None' || conc_no2 == '') { %>
+	      <td><span class="muted">Parametro non campionato</span></td>
+	      <% } else { %>
+	      <td><%= conc_no2 %>µg/m<sup>3</sup><% if (conc_no2 > 200) { %> <small class="text-error">(superiore ai limiti di legge)</small><% } %><% if (ora_no2 !== '') { %> ore <%= ora_no2 %><% } %></td>
+	      <% } %>
+	    </tr>
+	    <tr>
+	      <td>PM10 - media giornaliera</td>
+	       <% if ( conc_pm10 == 'None' || conc_pm10 == '') { %>
+	      <td><span class="muted">Parametro non campionato o campionato manualmente</span></td>
+	      <% } else { %>
+	      <td><%= conc_pm10 %>µg/m<sup>3</sup><% if (conc_pm10 > 50) { %> <small class="text-error">(superiore ai limiti di legge)</small><% } %></td>
+	      <% } %>
+	    </tr>
+	    <% if ( sup_pm10 != '' && sup_pm10 > 0) { %>
+	    <tr>
+	      <td>PM10 - superamenti del limite di legge dall'inizio dell'anno</td>
+	      <td><%= sup_pm10 %> <% if (sup_pm10 > 35) { %> <small class="text-error">(superiore ai limiti di legge)</small><% } %></td>
+	    </tr>
+	    <% } %>
+	    <tr>
+	      <td>O<sub>3</sub> - massimo orario</td>
+	      <% if ( conc_o3 == 'None' || conc_o3 == '') { %>
+	      <td><span class="muted">Parametro non campionato</span></td>
+	      <% } else { %>
+	      <td><%= conc_o3 %> µg/m<sup>3</sup><% if (ora_o3 !== '') { %> ore <%= ora_o3 %><% } %><% if (conc_o3 > 180) { %> <small class="text-error">(superiore ai limiti di legge)</small><% } %></td>
+	      <% } %>
+	    </tr>
+	    <tr>
+	      <td>O<sub>3</sub> - Massimo giornaliero della media mobile 8 ore</td>
+	      <% if ( conc_mm_o3 == 'None' || conc_mm_o3 == '') { %>
+	      <td><span class="muted">Parametro non campionato</span></td>
+	      <% } else { %>
+	      <td><%= conc_mm_o3 %> µg/m<sup>3</sup><% if (conc_mm_o3 > 120) { %> <small class="text-error">(superiore ai limiti di legge)</small><% } %></td>
+	      <% } %>
+	    </tr>
+	    <tr>
+	      <td>SO<sub>2</sub> - massimo orario</td>
+	      <% if ( conc_so2 == 'None' || conc_so2 == '') { %>
+	      <td><span class="muted">Parametro non campionato</span></td>
+	      <% } else { %>
+	      <td><%= conc_so2 %>µg/m<sup>3</sup><% if (ora_so2 !== '') { %> ore <%= ora_so2 %><% } %><% if (conc_so2 > 350) { %> <small class="text-error">(superiore ai limiti di legge)</small><% } %></td>
+	      <% } %>
+	    </tr>
+	    <% if ( sup_so2 == 'None' || sup_so2 == '') { %>
+	    <tr>
+	      <td>SO<sub>2</sub> - superamenti del limite di legge</td>
+	      <td><%= sup_so2 %> dall'inizio dell'anno<% if (sup_so2 > 24) { %> <small class="text-error">(superiore ai limiti di legge)</small><% } %></td>
+	    </tr>
+	    <% } %>
+	    <tr>
+	      <td>CO - Massimo giornaliero della media mobile 8 ore</td>
+	      <% if ( conc_mm_co == 'None' || conc_mm_co == '') { %>
+	      <td><span class="muted">Parametro non campionato</span></td>
+	      <% } else { %>
+	      <td><%= conc_mm_co %> mg/m<sup>3</sup><% if (conc_mm_co > 10) { %> <small class="text-error">(superiore ai limiti di legge)</small><% } %></td>
+	      <% } %>
+	    </tr>
+	    </tbody>
+	  <tfoot>
+	    <tr>
+	      <th>Parametro</th>
+	      <th>Dato rilevato</th>
+	    </tr>
+	  </tfoot>
+	 </table>
+	 <br>
+	 <br>
+	 <p>Per ulteriori informazioni sui valori e sul loro significato <a href='http://www.arpa.veneto.it/bollettini/htm/legenda.asp' rel="external" target='_system'>visita questa pagina</a>.</p>
+       </script>
+       
+        <script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="jslib/modernizr.js"></script>
+        <script type="text/javascript" src="jslib/jquery.min.js"></script>
+		<script type="text/javascript" src="jslib/highcharts.js"></script>
+		<script type="text/javascript" src="jslib/chart.js"></script>
+        <script type="text/javascript" src="jslib/underscore.js"></script>
+        <script type="text/javascript" src="jslib/json2-min.js"></script>
+        <script type="text/javascript" src="jslib/backbone.js"></script>
+        <script type="text/javascript" src="jslib/backbone.marionette.js"></script>
+	<script type="text/javascript" src="jslib/leaflet-src.js"></script>
+	<script type="text/javascript" src="jslib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="jslib/async.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/prototypes.js"></script>
+        <script type="text/javascript" src="js/views.js"></script>
+        <script type="text/javascript" src="js/controllers.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>

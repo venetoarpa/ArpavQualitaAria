@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>dev\views\centralinaview.js - apparpavaria</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../assets/css/logo.png" title="apparpavaria"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 1.0.0</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/Airdata.html">Airdata</a></li>
+            
+                <li><a href="../classes/AppController.html">AppController</a></li>
+            
+                <li><a href="../classes/AriaRouter.html">AriaRouter</a></li>
+            
+                <li><a href="../classes/Centralina.html">Centralina</a></li>
+            
+                <li><a href="../classes/CentralinaAlertView.html">CentralinaAlertView</a></li>
+            
+                <li><a href="../classes/CentralinaItem.html">CentralinaItem</a></li>
+            
+                <li><a href="../classes/CentralinaPopupMap.html">CentralinaPopupMap</a></li>
+            
+                <li><a href="../classes/CentralinaView.html">CentralinaView</a></li>
+            
+                <li><a href="../classes/CentralineList.html">CentralineList</a></li>
+            
+                <li><a href="../classes/CopTable.html">CopTable</a></li>
+            
+                <li><a href="../classes/Copview.html">Copview</a></li>
+            
+                <li><a href="../classes/DataParser.html">DataParser</a></li>
+            
+                <li><a href="../classes/DataProvider.html">DataProvider</a></li>
+            
+                <li><a href="../classes/GeoHelper.html">GeoHelper</a></li>
+            
+                <li><a href="../classes/MainView.html">MainView</a></li>
+            
+                <li><a href="../classes/MapHelper.html">MapHelper</a></li>
+            
+                <li><a href="../classes/MapView.html">MapView</a></li>
+            
+                <li><a href="../classes/Misurazione.html">Misurazione</a></li>
+            
+                <li><a href="../classes/Misure.html">Misure</a></li>
+            
+                <li><a href="../classes/ModalHelper.html">ModalHelper</a></li>
+            
+                <li><a href="../classes/O3.html">O3</a></li>
+            
+                <li><a href="../classes/Page.html">Page</a></li>
+            
+                <li><a href="../classes/PM10.html">PM10</a></li>
+            
+                <li><a href="../classes/Province.html">Province</a></li>
+            
+                <li><a href="../classes/Provincia.html">Provincia</a></li>
+            
+                <li><a href="../classes/ProvinciaItem.html">ProvinciaItem</a></li>
+            
+                <li><a href="../classes/Settings.html">Settings</a></li>
+            
+                <li><a href="../classes/SettingsView.html">SettingsView</a></li>
+            
+                <li><a href="../classes/TopView.html">TopView</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/airdata.html">airdata</a></li>
+            
+                <li><a href="../modules/controller.html">controller</a></li>
+            
+                <li><a href="../modules/measures.html">measures</a></li>
+            
+                <li><a href="../modules/model.html">model</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: dev\views\centralinaview.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/*
+|	File: centralinaview.js
+|	Author: Daniele Lain @ ARPA Veneto
+|	Last modified: 2013-08-02
+|
+|	Brief: Centralina details View prototype file
+|
+*/
+
+/**
+Provides the application a controller and view managers
+
+@module controller
+**/
+
+
+
+/**
+Renders a page with details from the station and plotted data
+
+@class CentralinaView
+@Extends Backbone.Marionette.ItemView
+@constructor
+**/
+var CentralinaView = Backbone.Marionette.ItemView.extend({
+
+    /**
+    Method automatically called at every instantiation, to bind needed events and listeners
+
+    @method initialize
+    @return {void}
+    **/
+    initialize: function() {
+        var topView = AA.controller.printHead({
+            &#x27;show&#x27;: 1,
+            &#x27;icon&#x27;: &#x27;icon-chevron-left&#x27;,
+            &#x27;id&#x27;: &#x27;top_back&#x27;,
+            &#x27;text&#x27;: &#x27;Indietro&#x27;
+        }, &#x27;Dati&#x27;);
+        topView.on(&#x27;cop&#x27;, this.cop, this);
+
+        // If the station monitors Ozone (there&#x27;s some Ozone samples)
+        if (this.model.get(&#x27;mis_o3&#x27;).length !== 0) {
+            // We find the maximum using the Underscore max() method, and set it into the model, to display it later
+            var maxo3 = this.model.get(&#x27;mis_o3&#x27;).max(function(sample) {
+                return parseFloat(sample.get(&#x27;sample&#x27;));
+            });
+            this.model.set(&#x27;maxo3&#x27;, maxo3);
+        }
+
+        // We do the same operations with our (eventual) PM10 samples
+        if (this.model.get(&#x27;mis_pm10&#x27;).length !== 0) {
+            var maxpm10 = this.model.get(&#x27;mis_pm10&#x27;).max(function(sample) {
+                return parseFloat(sample.get(&#x27;sample&#x27;));
+            });
+            this.model.set(&#x27;maxpm10&#x27;, maxpm10);
+        }
+
+        // We read from the settings if the station is starred and set it into the model
+        this.model.set(&#x27;ozonoStarred&#x27;, AA.settings.isStationStarred(this.model.get(&#x27;codseqst&#x27;)));
+    },
+
+    /**
+	Events hash, binding events in the form
+		&quot;event DOMObject&quot; (as in &quot;click #my_elem&quot;)
+	to methods.
+
+	@property events
+	@type Object
+	@static
+	@final
+	**/
+    events: {
+        &quot;click .toggle-ozone:not(.disabled)&quot;: &quot;toggle_ozone&quot;,
+        &quot;click .cop&quot;: &quot;cop&quot;,
+    },
+
+    /**
+    Toggles the starred state from the station in the application settings, and updates the model
+
+    @method toggle_ozone
+    @return {void}
+    **/
+    toggle_ozone: function() {
+        AA.settings.toggleStationAlert(this.model.get(&#x27;codseqst&#x27;));
+        this.model.set(&#x27;ozonoStarred&#x27;, AA.settings.isStationStarred(this.model.get(&#x27;codseqst&#x27;)));
+    },
+
+    /**
+    Navigates the application to the validated data page
+
+    @method cop
+    @return {void}
+    **/
+    cop: function() {
+        AA.router.navigate(&quot;cop/&quot; + this.model.get(&#x27;provincia&#x27;) + &#x27;/&#x27; + this.model.get(&#x27;codseqst&#x27;), {
+            trigger: true
+        });
+    },
+
+    /**
+	Identifies the template this view will use, in form of CSS/jQuery selector
+
+	@property template
+	@type String
+	@static
+	@final
+	**/
+    template: &quot;#details&quot;,
+
+    /**
+	Identifies the tag this view will use to render the element, in the form of CSS/jQuery selector
+
+	@property tagName
+	@type String
+	@static
+	@final
+	**/
+    tagName: &#x27;div&#x27;,
+
+    /**
+    Utility method to find the starting date from a set of dates, and return it as a timestamp
+
+    @method getStartDate
+	@param	set	a set of dates in the format YYYY-MM-DD HH:MM:SS
+    @return int	timestamp of the starting date from the set
+    **/
+    getStartDate: function(set) {
+        var str = _.first(set).get(&#x27;date&#x27;);
+        return Date.parse(str.replace(/ /, &#x27;T&#x27;));
+    },
+
+    /**
+    Utility method to create an array of samples from a set of PM10 or Ozone measure objects
+
+    @method getValues
+	@param	set	a set of objects adhering to the Misura interface
+    @return Array	the array of numerical samples
+    **/
+    getValues: function(set) {
+        var values = [];
+        _.each(set, function(element) {
+            if (element.get(&#x27;sample&#x27;) !== &#x27;&#x27; &amp;&amp; element.get(&#x27;sample&#x27;) !== &#x27;NaN&#x27;) {
+                values.push(parseFloat(element.get(&#x27;sample&#x27;)));
+            } else {
+                values.push(null);
+            }
+        });
+        return values;
+    },
+
+    /**
+    Plots the Ozone data graph. Has to check if ozone samples exist, and then calles the correct implementation based on the SVG implementation:
+	- If &lt;html&gt; has the SVG class (appended by the feature detection library Modernizr) we can render the Highcharts.js chart
+	- If &lt;html&gt; has no SVG class, we fallback to the Graph.js chart
+
+    @method plotOzono
+    @return {void}
+    **/
+    plotOzono: function() {
+
+        if (this.model.get(&#x27;mis_o3&#x27;).length !== 0) {
+            if ($(&#x27;html&#x27;).hasClass(&#x27;svg&#x27;)) {
+                this.ozonoHighcharts();
+            } else {
+                this.ozonoChart();
+            }
+        }
+    },
+
+    /**
+    Builds a Highcharts.js ozone chart, passing the needed options to the constructor
+
+    @method ozonoHighcharts
+    @return {void}
+    **/
+    ozonoHighcharts: function() {
+
+        $(&#x27;#ozono-canvas&#x27;).remove();
+        var startDate = this.getStartDate(this.model.get(&#x27;mis_o3&#x27;).models);
+
+        var values = this.getValues(this.model.get(&#x27;mis_o3&#x27;).models);
+
+        $(&#x27;#ozono-hc&#x27;).highcharts({
+            chart: {
+                type: &#x27;line&#x27;,
+            },
+            colors: [
+                &#x27;#0d233a&#x27;,
+                &#x27;#8bbc21&#x27;,
+                &#x27;#910000&#x27;,
+                &#x27;#1aadce&#x27;,
+                &#x27;#492970&#x27;,
+                &#x27;#f28f43&#x27;,
+                &#x27;#77a1e5&#x27;,
+                &#x27;#c42525&#x27;,
+                &#x27;#a6c96a&#x27;
+            ],
+            xAxis: {
+                type: &#x27;datetime&#x27;,
+                minTickInterval: 12 * 3600 * 1000,
+                dateTimeLabelFormats: {
+                    millisecond: &quot;%e/%m/%Y, %H:%M:%S.%L&quot;,
+                    second: &quot;%e/%m/%Y, %H:%M:%S&quot;,
+                    minute: &quot;%e/%m/%Y, %H:00&quot;,
+                    hour: &quot;%e/%m/%Y, %H:00&quot;,
+                    day: &quot;%e/%m/%Y&quot;,
+                    week: &quot;Week from %A, %b %e, %Y&quot;,
+                    month: &quot;%m %Y&quot;,
+                    year: &quot;%Y&quot;
+                }
+            },
+            yAxis: {
+                min: 0,
+                max: 320,
+                tickInterval: 40,
+                title: {
+                    text: &#x27;µg/m3&#x27;
+                },
+                plotBands: [{
+                    from: 0,
+                    to: 120,
+                    color: &#x27;#BFFFFF&#x27;
+                }, {
+                    from: 120,
+                    to: 180,
+                    color: &#x27;#99FFFF&#x27;
+                }, {
+                    from: 180,
+                    to: 240,
+                    color: &#x27;#66D9FF&#x27;
+                }, {
+                    from: 240,
+                    to: 300,
+                    color: &#x27;#00B3FF&#x27;
+                }],
+                gridLineWidth: 0,
+            },
+            tooltip: {
+                shared: true,
+                valueSuffix: &#x27; µg/m3&#x27;,
+                dateTimeLabelFormats: {
+                    millisecond: &quot;%e/%m/%Y, %H:%M:%S.%L&quot;,
+                    second: &quot;%e/%m/%Y, %H:%M:%S&quot;,
+                    minute: &quot;%e/%m/%Y, %H:00&quot;,
+                    hour: &quot;%e/%m/%Y, %H:00&quot;,
+                    day: &quot;%e/%m/%Y&quot;,
+                    week: &quot;Week from %A, %b %e, %Y&quot;,
+                    month: &quot;%m %Y&quot;,
+                    year: &quot;%Y&quot;
+                }
+            },
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: null
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                line: {
+                    pointStart: startDate,
+                    pointInterval: 1000 * 3600
+                }
+            },
+            series: [{
+                name: &#x27;Ozono&#x27;,
+                data: values
+            }]
+        });
+    },
+
+    /**
+    Builds a Graph.js chart, passing the needed options to the constructor.
+	has to do some pre-processing, to create an array of dates, because this is not automatic as in Highcharts
+
+    @method ozonoChart
+    @return {void}
+    **/
+    ozonoChart: function() {
+        var startDate = this.getStartDate(this.model.get(&#x27;mis_o3&#x27;).models);
+        var dates = [];
+        //We want the dates[] array to be formatted this way:
+        //	- 48 elements, as the 48 hours we have to display
+        //		- The element can be empty ( &#x27;&#x27; ) if no label is to be displayed
+        //		- The element can be a DD/MM HH:MM	string if a labes is to be displayed
+        //	And we want labels to be displayed only on middays and midnights.
+        var date = startDate;
+        var now = Date.now();
+        var count = 0;
+        var oldDay = 0;
+        while (date &lt;= now &amp;&amp; count &lt; 48) {
+            var dt = new Date(date);
+            var day = dt.getDate();
+            if (day != oldDay || dt.getHours() == &#x27;12&#x27;) {
+                dates.push(dt.getDate() + &#x27;/&#x27; + (parseInt(dt.getMonth(), null) + 1) + &#x27; &#x27; + dt.getHours() + &#x27;:&#x27; + dt.getMinutes());
+                oldDay = day;
+            } else {
+                dates.push(&#x27;&#x27;);
+            }
+            date = date + 1000 * 3600;
+            count = count + 1;
+        }
+
+        var values = this.getValues(this.model.get(&#x27;mis_o3&#x27;).models);
+
+        // IMPORTANT! Stretch the canvas to the whole document width available, to avoid rendering a chart which is too little or too big
+        $(&quot;#ozono-canvas&quot;).get(0).width = $(document).width();
+        var ctx = $(&quot;#ozono-canvas&quot;).get(0).getContext(&quot;2d&quot;);
+
+        new Chart(ctx).Line({
+            labels: dates,
+            datasets: [{
+                fillColor: &quot;rgba(220,220,220,0.0)&quot;,
+                strokeColor: &quot;rgba(13,35,58,1)&quot;,
+                pointColor: &quot;rgba(33,55,78,1)&quot;,
+                pointStrokeColor: &quot;#fff&quot;,
+                data: values
+            }]
+        }, {
+            bezierCurve: false,
+            scaleShowLabels: true,
+            scaleOverride: true,
+            scaleSteps: 8,
+            scaleStepWidth: 40,
+            scaleStartValue: 0,
+        });
+    },
+
+    /**
+    Plots the PM10 data graph. Has to check if PM10 samples exist, and then calles the correct implementation based on the SVG implementation:
+	- If &lt;html&gt; has the SVG class (appended by the feature detection library Modernizr) we can render the Highcharts.js chart
+	- If &lt;html&gt; has no SVG class, we fallback to the Graph.js chart
+
+    @method plotPM10
+    @return {void}
+    **/
+    plotPM10: function() {
+
+        if (this.model.get(&#x27;mis_pm10&#x27;).length !== 0) {
+            if ($(&#x27;html&#x27;).hasClass(&#x27;svg&#x27;)) {
+                this.PM10Highcharts();
+            } else {
+                this.PM10Chart();
+            }
+
+        }
+    },
+
+    /**
+    Builds a Highcharts.js PM10 chart, passing the needed options to the constructor
+
+    @method PM10Highcharts
+    @return {void}
+    **/
+    PM10Highcharts: function() {
+
+        $(&#x27;#pm10-canvas&#x27;).remove();
+
+        var startDate = this.getStartDate(this.model.get(&#x27;mis_pm10&#x27;).models);
+        var values = this.getValues(this.model.get(&#x27;mis_pm10&#x27;).models);
+
+        $(&#x27;#pm10-hc&#x27;).highcharts({
+            chart: {
+                type: &#x27;column&#x27;
+            },
+            colors: [
+                &#x27;#910000&#x27;,
+                &#x27;#1aadce&#x27;,
+                &#x27;#492970&#x27;,
+                &#x27;#f28f43&#x27;,
+                &#x27;#77a1e5&#x27;,
+                &#x27;#c42525&#x27;,
+                &#x27;#a6c96a&#x27;
+            ],
+            xAxis: {
+                type: &#x27;datetime&#x27;,
+                minTickInterval: 24 * 3600 * 1000,
+                dateTimeLabelFormats: {
+                    millisecond: &quot;%e/%m/%Y, %H:%M:%S.%L&quot;,
+                    second: &quot;%e/%m/%Y, %H:%M:%S&quot;,
+                    minute: &quot;%e/%m/%Y, %H:00&quot;,
+                    hour: &quot;%e/%m/%Y, %H:00&quot;,
+                    day: &quot;%e/%m/%Y&quot;,
+                    week: &quot;Week from %A, %b %e, %Y&quot;,
+                    month: &quot;%m %Y&quot;,
+                    year: &quot;%Y&quot;
+                }
+            },
+            yAxis: {
+                min: 0,
+                max: 250,
+                tickInterval: 25,
+                title: {
+                    text: &#x27;µg/m3&#x27;
+                },
+                plotBands: [{
+                    from: 0,
+                    to: 50,
+                    color: &#x27;#99FFFF&#x27;
+                }, {
+                    from: 50,
+                    to: 100,
+                    color: &#x27;#66D9FF&#x27;
+                }, {
+                    from: 100,
+                    to: 250,
+                    color: &#x27;#00B3FF&#x27;
+                }],
+                gridLineWidth: 0,
+            },
+            tooltip: {
+                shared: true,
+                valueSuffix: &#x27; µg/m3&#x27;,
+                dateTimeLabelFormats: {
+                    millisecond: &quot;%e/%m/%Y, %H:%M:%S.%L&quot;,
+                    second: &quot;%e/%m/%Y, %H:%M:%S&quot;,
+                    minute: &quot;%e/%m/%Y, %H:00&quot;,
+                    hour: &quot;%e/%m/%Y, %H:00&quot;,
+                    day: &quot;%e/%m/%Y&quot;,
+                    week: &quot;Week from %A, %b %e, %Y&quot;,
+                    month: &quot;%e %Y&quot;,
+                    year: &quot;%Y&quot;
+                }
+            },
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: null
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0,
+                    borderWidth: 0,
+                    pointStart: startDate,
+                    pointInterval: 1000 * 3600 * 24
+                }
+            },
+            series: [{
+                name: &#x27;PM10&#x27;,
+                data: values
+            }]
+        });
+    },
+
+    /**
+    Builds a Graph.js chart, passing the needed options to the constructor.
+	has to do some pre-processing, to create an array of dates, because this is not automatic as in Highcharts
+
+    @method ozonoChart
+    @return {void}
+    **/
+    PM10Chart: function() {
+        var startDate = this.getStartDate(this.model.get(&#x27;mis_pm10&#x27;).models);
+        var dates = [];
+        //We want the dates[] array to be formatted this way:
+        //	- 7 elements, as the 7 hours we have to display
+        //		- The element can be empty ( &#x27;&#x27; ) if no label is to be displayed
+        //		- The element can be a DD/MM string if a labes is to be displayed
+        //	And we want labels to be displayed only on the first, third, fifth and seventh day if the document is small in witdh, and everyday otherwise
+        var date = startDate;
+        var now = Date.now();
+        var count = 0;
+        while (date &lt;= now &amp;&amp; count &lt; 7) {
+            var dt = new Date(date);
+            var day = dt.getDate();
+            if ($(document).width() &lt; 300) {
+                if (count % 2 == 1) {
+                    dates.push(dt.getDate() + &#x27;/&#x27; + (parseInt(dt.getMonth(), null) + 1));
+                }
+            } else {
+                dates.push(dt.getDate() + &#x27;/&#x27; + (parseInt(dt.getMonth(), null) + 1));
+            }
+            date = date + 1000 * 3600 * 24;
+            count = count + 1;
+        }
+
+        var values = this.getValues(this.model.get(&#x27;mis_o3&#x27;).models);
+
+        // IMPORTANT! Stretch the canvas to the maximum available width BEFORE RENDERING ANYTHING
+        $(&quot;#pm10-canvas&quot;).get(0).width = $(document).width();
+        var ctx = $(&quot;#pm10-canvas&quot;).get(0).getContext(&quot;2d&quot;);
+
+        new Chart(ctx).Bar({
+            labels: dates,
+            datasets: [{
+                fillColor: &quot;rgba(151,187,205,0.5)&quot;,
+                strokeColor: &quot;rgba(151,187,205,1)&quot;,
+                data: values,
+            }]
+        }, {
+            scaleShowLabels: true,
+            scaleOverride: true,
+            scaleSteps: 5,
+            scaleStepWidth: 50,
+            scaleStartValue: 0,
+        });
+    },
+
+});
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

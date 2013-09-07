@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="it.veneto.arpa.aria" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name> ARPAV Aria</name>
+    <description>
+        Applicazione per il monitoraggio dei parametri di qualità dell'aria rilevati da Arpa Veneto
+    </description>
+    <author email="daniele_lain@libero.it" >
+        Daniele Lain
+    </author>
+    <access origin="http://89.96.234.233" />
+	<access origin="*.openstreetmap.org" />
+    <preference name="fullscreen" value="false" />
+    <preference name="webviewbounce" value="true" />
+</widget>
