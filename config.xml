@@ -7,6 +7,7 @@
     <author email="daniele_lain@libero.it" >
         Daniele Lain
     </author>
+    <icon src='icon.png' />
     <access origin="http://89.96.234.233" />
 	<access origin="*.openstreetmap.org" />
     <preference name="fullscreen" value="false" />
