@@ -12,4 +12,8 @@
 	<access origin="*.openstreetmap.org" />
     <preference name="fullscreen" value="false" />
     <preference name="webviewbounce" value="true" />
+    <preference name="permissions" value="none"/>
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>
+    <feature name="http://api.phonegap.com/1.0/device"/>
 </widget>
