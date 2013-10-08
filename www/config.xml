@@ -7,7 +7,15 @@
     <author email="daniele_lain@libero.it" >
         Daniele Lain
     </author>
+	
     <icon src='icon.png' />
+	<!-- iOS icons -->
+    <icon src="img/ios/icon.png" gap:platform="ios" width="57" height="57" />
+	<icon src="img/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+	<icon src="img/ios/icon_at_2x.png" gap:platform="ios" width="114" height="114" />
+	<icon src="img/ios/icon-72_at_2x.png" gap:platform="ios" width="144" height="144" />
+	
+	
     <access origin="http://89.96.234.233" />
 	<access origin="*.openstreetmap.org" />
     <preference name="fullscreen" value="false" />
