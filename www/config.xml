@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="it.veneto.arpa.aria" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="it.veneto.arpa.aria" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>ARPAV Qualità Aria</name>
     <description>
         Applicazione per il monitoraggio dei parametri di qualità dell'aria rilevati da Arpa Veneto
@@ -7,15 +7,11 @@
     <author email="daniele_lain@libero.it" >
         Daniele Lain
     </author>
-	
     <icon src='icon.png' />
-	<!-- iOS icons -->
     <icon src="img/ios/icon.png" gap:platform="ios" width="57" height="57" />
-	<icon src="img/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
-	<icon src="img/ios/icon_at_2x.png" gap:platform="ios" width="114" height="114" />
-	<icon src="img/ios/icon-72_at_2x.png" gap:platform="ios" width="144" height="144" />
-	
-	
+    <icon src="img/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+    <icon src="img/ios/icon_at_2x.png" gap:platform="ios" width="114" height="114" />
+    <icon src="img/ios/icon-72_at_2x.png" gap:platform="ios" width="144" height="144" />
     <access origin="http://89.96.234.233" />
 	<access origin="*.openstreetmap.org" />
     <preference name="fullscreen" value="false" />
