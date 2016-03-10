@@ -1,23 +1,55 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="it.veneto.arpa.aria" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="it.veneto.arpa.aria" 
+    version="1.0.1"
+    versionCode = "101" 
+    xmlns="http://www.w3.org/ns/widgets" 
+    xmlns:gap="http://phonegap.com/ns/1.0">
+    
     <name>ARPAV Qualità Aria</name>
+    
     <description>
-        Applicazione per il monitoraggio dei parametri di qualità dell'aria rilevati da Arpa Veneto
+        Applicazione per il monitoraggio dei parametri di qualità dell'aria rilevati da Arpa Veneto.
     </description>
-    <author email="daniele_lain@libero.it" >
+    
+    <author email="daniele_lain@libero.it">
         Daniele Lain
     </author>
-    <icon src='icon.png' />
-    <icon src="img/ios/icon.png" gap:platform="ios" width="57" height="57" />
+    
+    <feature name="http://api.phonegap.com/1.0/device" />
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>
+    
+    <preference name="permissions" 					value="none" />
+    <preference name="orientation" 					value="default" />
+    <preference name="target-device" 				value="universal" />
+    <preference name="fullscreen" 					value="true" />
+    <preference name="webviewbounce" 				value="true" />
+    <preference name="prerendered-icon" 			value="true" />
+    <preference name="stay-in-webview" 				value="false" />
+    <preference name="ios-statusbarstyle" 			value="black-opaque" />
+    <preference name="detect-data-types" 			value="true" />
+    <preference name="exit-on-suspend" 				value="false" />
+    <preference name="show-splash-screen-spinner" 	value="true" />
+    <preference name="auto-hide-splash-screen" 		value="true" />
+    <preference name="disable-cursor" 				value="false" />
+    <preference name="android-minSdkVersion" 		value="7" />
+    <preference name="android-installLocation" 		value="auto" />
+
+    <icon src='icon.png' />	
+	<icon src="img/ios/icon.png" gap:platform="ios" width="57" height="57" />
     <icon src="img/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
     <icon src="img/ios/icon_at_2x.png" gap:platform="ios" width="114" height="114" />
     <icon src="img/ios/icon-72_at_2x.png" gap:platform="ios" width="144" height="144" />
+
+    <gap:splash src="img/splash.png" />
+
+    <plugin name="cordova-plugin-splashscreen" spec="2.1.0" source="pgb" />
+    <plugin name="cordova-plugin-device" spec="1.0.1" source="pgb" />
+	<plugin name="cordova-plugin-inappbrowser" spec="1.0.1" source="pgb" />
+	<plugin name="cordova-plugin-network-information" spec="1.0.1" source="pgb" />
+	<plugin name="cordova-plugin-geolocation" spec="1.0.1" source="pgb" />
+    <plugin name="cordova-plugin-whitelist" />
+    
     <access origin="http://89.96.234.233" />
 	<access origin="*.openstreetmap.org" />
-    <preference name="fullscreen" value="false" />
-    <preference name="webviewbounce" value="true" />
-    <preference name="permissions" value="none"/>
-    <feature name="http://api.phonegap.com/1.0/geolocation"/>
-    <feature name="http://api.phonegap.com/1.0/network"/>
-    <feature name="http://api.phonegap.com/1.0/device"/>
 </widget>
